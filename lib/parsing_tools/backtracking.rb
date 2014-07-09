@@ -32,7 +32,7 @@ module ParsingTools
     rescue ParseError
       raise if rest_methods.empty?
       restore_parser_state(state)
-      backtrack(*rest_methods)
+      backtrack(*rest_methods, debug: debug)
     end
 
   end
