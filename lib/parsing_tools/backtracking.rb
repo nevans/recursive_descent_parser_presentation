@@ -23,7 +23,7 @@ module ParsingTools
     # Will only raise exception from last attempt.
     #
     # call like so:
-    #     backtrack(method(:foo), method(:bar), method(:baz))
+    #     backtrack(:foo, :bar, :baz)
     #
     def backtrack(first_method, *rest_methods, debug: false)
       state = save_parser_state
