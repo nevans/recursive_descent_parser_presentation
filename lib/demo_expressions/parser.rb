@@ -9,7 +9,7 @@ module DemoExpressions
     include ParsingTools::ErrorHandling
     include ParsingTools::Lexer
     include ParsingTools::Lookahead
-    attr_reader :debug
+    attr_accessor :debug
 
     def initialize(str=nil)
       parsing(str)
